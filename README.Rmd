@@ -1,0 +1,17 @@
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    fig.path = "README-"
+)
+```
+
+## Can we do better than this?
+
+```{r}
+library(quanteda)
+data <- data_corpus_inaugural
+x <- dfm(data)
+textplot_wordcloud(x)
+```
