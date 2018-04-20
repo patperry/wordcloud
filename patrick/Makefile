@@ -1,6 +1,6 @@
 RSCRIPT= Rscript --vanilla
 
-all: README.md
+all: patrick.md
 
 %.md: %.Rmd
 	$(RSCRIPT) -e 'knitr::knit("$<")'
