@@ -38,11 +38,11 @@ with(stats[1:300,],
 
 ## No stop words
 
-```{r}
+```{r, fig.width = 12, fig.height = 12}
 print(subset(stats, !term %in% stopwords_en))
 
 with(subset(stats, !term %in% stopwords_en),
-     wordcloud(term, count, random.order = FALSE, scale = c(6, .5)))
+     suppressWarnings(wordcloud(term, count, random.order = FALSE)))
 ```
 
 
